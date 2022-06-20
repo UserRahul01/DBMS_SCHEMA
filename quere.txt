@@ -1,0 +1,50 @@
+
+create database fakatime;
+use database;
+
+ create table department(Dno integer primary key not NULL, Dname varchar(50),Location varchar(50) DEFAULT 'New Delhi');
+
+ create table employee(Eno char(3) primary key not NULL, Ename varchar(50),Job_Type varchar(50), 
+ Manager char(3),Hire_date date,Dno integer,Commission decimal(10,2),Salary Decimal(7,2),foreign key(Dno) references department(Dno));
+
+ //insert into deparment values :
+
+mysql> insert into department values('30','HR', 'New Delhi');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into department values('15','BR', '');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into department values('20','PR', 'New Delhi');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into department values('10','AC', 'New Delhi');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into department values('25','RC', 'New Delhi');
+Query OK, 1 row affected (0.00 sec)
+
+ //insert into employee values :
+mysql> insert into employee values('790', 'Panda', 'programer', '778', '2021/05/05', '30', '120.00', '2200.00');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into employee values('700', 'rahul', 'software engineer', '543', '1981/08/15', '15', '180.00', '2000.00');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into employee values('770', 'Raju', 'Manager', 'NO', '2001/04/10', '20', '150.00', '1900.00');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into employee values('778', 'Jony', 'software enginner', '132', '1980/07/11', '10', '120.00', '1400.00');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into employee values('408', 'Aarzoo', 'Manager', '505', '2003/07/11', '25', '00.00', '3200.00');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into employee values('222', 'Pikachu', 'Typer', '605', '1991/04/11', '10', '70.00', '700.00');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into employee values('555', 'Alauddin', 'Typer', '615', '1999/12/12', '15', '160.00', '650.00');
+Query OK, 1 row affected (0.00 sec)
+
+
+
